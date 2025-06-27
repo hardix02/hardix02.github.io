@@ -30,15 +30,36 @@
   <!--
     - #MAIN
   -->
+ <div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+          <feColorMatrix in="blur" mode="matrix"
+            values="1 0 0 0 0   0 1 0 0 0   0 0 1 0 0   0 0 0 18 -8"
+            result="goo"/>
+          <feBlend in="SourceGraphic" in2="goo"/>
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+    </div>
+  </div>
 
   <main>
 
     <!--
       - #SIDEBAR
     -->
-
+      
+    
     <aside class="sidebar" data-sidebar>
-
+      
       <div class="sidebar-info">
 
         <figure class="avatar-box">
@@ -237,7 +258,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
+                <img src="./assets/images/software_developer.svg
                 " alt="design icon" width="40">
               </div>
 
@@ -254,11 +275,11 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <img src="./assets/images/web_developer.svg" alt="Web development icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">Web Development</h4>
 
                 <p class="service-item-text">
                   High-quality development of sites at the professional level.
@@ -270,14 +291,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <img src="./assets/images/backend_developer.svg" alt="mobile app icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Wordpress Development</h4>
+                <h4 class="h4 service-item-title">Backend Development</h4>
 
                 <p class="service-item-text">
-                  Professional development of Wordpress Website for best User Experience.
+                  Built a robust Python backend for exceptional UX.
                 </p>
               </div>
 
@@ -286,14 +307,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <img src="./assets/images/mql_developer.svg" alt="camera icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
+                <h4 class="h4 service-item-title">MQL Development</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  Built MQL5 EAs for real-time trading automation.
                 </p>
               </div>
 
@@ -470,13 +491,13 @@
 
             <li class="clients-item">
               <a href="#">
-                <img src="./assets/images/html.png" alt="client logo">
+                <img src="./assets/images/python.png" alt="client logo">
               </a>
             </li>
 
             <li class="clients-item">
               <a href="#">
-                <img src="./assets/images/css.png" alt="client logo">
+                <img src="./assets/images/react.png" alt="client logo">
               </a>
             </li>
            
