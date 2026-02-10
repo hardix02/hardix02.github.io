@@ -157,3 +157,40 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.querySelector(".close-btn");
+
+  if (!modal || !modalImg || !closeBtn) return;
+
+  document.querySelectorAll(".project-item-icon-box").forEach((iconBox) => {
+    iconBox.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const img = this.closest(".project-img")?.querySelector("img");
+      if (!img) return;
+
+      modalImg.src = img.src;
+      modal.classList.add("active");
+    });
+  });
+
+  closeBtn.addEventListener("click", function () {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      modal.classList.remove("active");
+    }
+  });
+});
